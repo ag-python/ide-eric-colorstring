@@ -4,5 +4,5 @@
 #
 
 """
-Package implementing the 'Color String' tool plug-in.
+Package implementing the 'Color String' tool plug-in dialogs and data.
 """

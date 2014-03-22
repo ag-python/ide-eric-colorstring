@@ -2,7 +2,7 @@
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric5 project file for project ColorString -->
 <Project version="5.1">
-  <Language>en</Language>
+  <Language>en_US</Language>
   <Hash>bf7dfc760db7f57239ae96b215ea79bb0df717d5</Hash>
   <ProgLanguage mixed="0">Python3</ProgLanguage>
   <ProjectType>E4Plugin</ProjectType>
@@ -16,13 +16,28 @@
   <Sources>
     <Source>__init__.py</Source>
     <Source>PluginColorString.py</Source>
+    <Source>ColorString/__init__.py</Source>
+    <Source>ColorString/ColorSelectionDialog.py</Source>
   </Sources>
-  <Forms/>
-  <Translations/>
+  <Forms>
+    <Form>ColorString/ColorSelectionDialog.ui</Form>
+  </Forms>
+  <Translations>
+    <Translation>ColorString/i18n/colorstring_de.ts</Translation>
+    <Translation>ColorString/i18n/colorstring_en.ts</Translation>
+    <Translation>ColorString/i18n/colorstring_es.ts</Translation>
+    <Translation>ColorString/i18n/colorstring_de.qm</Translation>
+    <Translation>ColorString/i18n/colorstring_en.qm</Translation>
+  </Translations>
   <Resources/>
   <Interfaces/>
   <Others>
     <Other>.hgignore</Other>
+    <Other>ChangeLog</Other>
+    <Other>ColorString/Documentation/LICENSE.GPL3</Other>
+    <Other>ColorString/Documentation/source</Other>
+    <Other>PKGLIST</Other>
+    <Other>PluginColorString.zip</Other>
   </Others>
   <MainScript>PluginColorString.py</MainScript>
   <Vcs>
@@ -142,5 +157,77 @@
     <FiletypeAssociation pattern="*.ts" type="TRANSLATIONS"/>
     <FiletypeAssociation pattern="*.ui" type="FORMS"/>
     <FiletypeAssociation pattern="*.ui.h" type="FORMS"/>
+    <FiletypeAssociation pattern="Ui_*.py" type="__IGNORE__"/>
   </FiletypeAssociations>
+  <Documentation>
+    <DocumentationParams>
+      <dict>
+        <key>
+          <string>ERIC4DOC</string>
+        </key>
+        <value>
+          <dict>
+            <key>
+              <string>cssFile</string>
+            </key>
+            <value>
+              <string>%PYTHON%/eric5/CSSs/default.css</string>
+            </value>
+            <key>
+              <string>ignoreDirectories</string>
+            </key>
+            <value>
+              <list>
+                <string>.eric5project</string>
+                <string>_eric5project</string>
+                <string>.ropeproject</string>
+                <string>_ropeproject</string>
+                <string>.hg</string>
+              </list>
+            </value>
+            <key>
+              <string>ignoreFilePatterns</string>
+            </key>
+            <value>
+              <list>
+                <string>Ui_*.py</string>
+              </list>
+            </value>
+            <key>
+              <string>noempty</string>
+            </key>
+            <value>
+              <bool>True</bool>
+            </value>
+            <key>
+              <string>outputDirectory</string>
+            </key>
+            <value>
+              <string>ColorString/Documentation/source</string>
+            </value>
+            <key>
+              <string>qtHelpEnabled</string>
+            </key>
+            <value>
+              <bool>False</bool>
+            </value>
+            <key>
+              <string>sourceExtensions</string>
+            </key>
+            <value>
+              <list>
+                <string></string>
+              </list>
+            </value>
+            <key>
+              <string>useRecursion</string>
+            </key>
+            <value>
+              <bool>True</bool>
+            </value>
+          </dict>
+        </value>
+      </dict>
+    </DocumentationParams>
+  </Documentation>
 </Project>

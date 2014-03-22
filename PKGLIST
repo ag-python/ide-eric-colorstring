@@ -1,0 +1,7 @@
+ColorString/ColorSelectionDialog.py
+ColorString/ColorSelectionDialog.ui
+ColorString/Documentation/LICENSE.GPL3
+ColorString/__init__.py
+ColorString/i18n/colorstring_de.qm
+ColorString/i18n/colorstring_en.qm
+PluginColorString.py
