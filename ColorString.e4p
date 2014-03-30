@@ -28,6 +28,7 @@
     <Translation>ColorString/i18n/colorstring_es.ts</Translation>
     <Translation>ColorString/i18n/colorstring_de.qm</Translation>
     <Translation>ColorString/i18n/colorstring_en.qm</Translation>
+    <Translation>ColorString/i18n/colorstring_es.qm</Translation>
   </Translations>
   <Resources/>
   <Interfaces/>

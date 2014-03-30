@@ -4,4 +4,5 @@ ColorString/Documentation/LICENSE.GPL3
 ColorString/__init__.py
 ColorString/i18n/colorstring_de.qm
 ColorString/i18n/colorstring_en.qm
+ColorString/i18n/colorstring_es.qm
 PluginColorString.py
