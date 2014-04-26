@@ -22,7 +22,7 @@ name = "Color String Plug-in"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
 autoactivate = True
 deactivateable = True
-version = "0.2.0"
+version = "1.0.0"
 className = "ColorStringPlugin"
 packageName = "ColorString"
 shortDescription = "Insert color as string"
@@ -33,6 +33,7 @@ longDescription = \
     """ the dialog and is replaced with the new color."""
 needsRestart = False
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""
