@@ -7,7 +7,8 @@
 Module implementing a dialog to select a color by name.
 """
 
-from PyQt4.QtGui import QDialog, QColor, QPixmap, QIcon
+from PyQt5.QtGui import QColor, QPixmap, QIcon
+from PyQt5.QtWidgets import QDialog
 
 from .Ui_ColorSelectionDialog import Ui_ColorSelectionDialog
 

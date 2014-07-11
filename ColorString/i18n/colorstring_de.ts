@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<!DOCTYPE TS><TS version="2.0" language="de_DE" sourcelanguage="">
 <context>
     <name>ColorSelectionDialog</name>
     <message>
@@ -22,17 +21,17 @@
 <context>
     <name>ColorStringPlugin</name>
     <message>
-        <location filename="../../PluginColorString.py" line="267"/>
+        <location filename="../../PluginColorString.py" line="269"/>
         <source>Color String</source>
         <translation>Farbzeichenkette</translation>
     </message>
     <message>
-        <location filename="../../PluginColorString.py" line="218"/>
+        <location filename="../../PluginColorString.py" line="220"/>
         <source>&lt;p&gt;The selected string &lt;b&gt;{0}&lt;/b&gt; is not a valid color string. Aborting!&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die ausgewählte Zeichenkette &lt;b&gt;{0}&lt;/b&gt; ist keine gültige Farbe. Abbruch!&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../PluginColorString.py" line="267"/>
+        <location filename="../../PluginColorString.py" line="269"/>
         <source>&lt;p&gt;The selected string &lt;b&gt;{0}&lt;/b&gt; is not a valid color name. Aborting!&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die ausgewählte Zeichenkette &lt;b&gt;{0}&lt;/b&gt; ist kein gültiger Farbname. Abbruch!&lt;/p&gt;</translation>
     </message>

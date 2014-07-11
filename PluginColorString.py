@@ -11,8 +11,9 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import QObject, QTranslator
-from PyQt4.QtGui import QColor, QColorDialog, QMenu, QDialog
+from PyQt5.QtCore import QObject, QTranslator
+from PyQt5.QtGui import QColor
+from PyQt5.QtWidgets import QColorDialog, QMenu, QDialog
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
@@ -22,7 +23,7 @@ name = "Color String Plug-in"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
 autoactivate = True
 deactivateable = True
-version = "1.0.0"
+version = "2.0.0"
 className = "ColorStringPlugin"
 packageName = "ColorString"
 shortDescription = "Insert color as string"
@@ -179,7 +180,7 @@ class ColorStringPlugin(QObject):
         """
         isHex = True
         for c in text:
-            isHex = isHex and c in "0123456789abcdefABCDEF" 
+            isHex = isHex and c in "0123456789abcdefABCDEF"
         return isHex
     
     def __isValidColor(self, name):
@@ -217,9 +218,9 @@ class ColorStringPlugin(QObject):
             if not self.__isValidColor(currColor):
                 E5MessageBox.critical(
                     self.__ui,
-                    self.trUtf8("Color String"),
-                    self.trUtf8(
-                        """<p>The selected string <b>{0}</b> is not a""" \
+                    self.tr("Color String"),
+                    self.tr(
+                        """<p>The selected string <b>{0}</b> is not a"""
                         """ valid color string. Aborting!</p>""")
                     .format(currColor))
                 return
@@ -265,9 +266,9 @@ class ColorStringPlugin(QObject):
             if currColor not in QColor.colorNames():
                 E5MessageBox.critical(
                     self.__ui,
-                    self.trUtf8("Color String"),
-                    self.trUtf8(
-                        """<p>The selected string <b>{0}</b> is not a""" \
+                    self.tr("Color String"),
+                    self.tr(
+                        """<p>The selected string <b>{0}</b> is not a"""
                         """ valid color name. Aborting!</p>""")
                     .format(currColor))
                 return
