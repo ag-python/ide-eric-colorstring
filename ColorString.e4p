@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
-<!-- eric6 project file for project ColorString -->
+<!-- eric project file for project ColorString -->
 <!-- Copyright (C) 2014 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -30,6 +30,8 @@
     <Translation>ColorString/i18n/colorstring_de.qm</Translation>
     <Translation>ColorString/i18n/colorstring_en.qm</Translation>
     <Translation>ColorString/i18n/colorstring_es.qm</Translation>
+    <Translation>ColorString/i18n/colorstring_ru.ts</Translation>
+    <Translation>ColorString/i18n/colorstring_ru.qm</Translation>
   </Translations>
   <Resources/>
   <Interfaces/>
@@ -40,6 +42,7 @@
     <Other>ColorString/Documentation/source</Other>
     <Other>PKGLIST</Other>
     <Other>PluginColorString.zip</Other>
+    <Other>ColorString.e4p</Other>
   </Others>
   <MainScript>PluginColorString.py</MainScript>
   <Vcs>
