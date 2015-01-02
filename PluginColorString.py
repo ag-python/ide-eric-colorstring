@@ -93,6 +93,7 @@ class ColorStringPlugin(QObject):
             self.__editorClosed)
         
         for editor, acts in self.__editors.items():
+            editor.showMenu.disconnect(self.__editorShowMenu)
             menu = editor.getMenu("Tools")
             if menu is not None:
                 for act in acts:
