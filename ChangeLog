@@ -1,5 +1,8 @@
 ChangeLog
 ---------
+Version 2.0.1:
+- bug fixes
+
 Version 2.0.0:
 - ported for eric6 using PyQt5
 

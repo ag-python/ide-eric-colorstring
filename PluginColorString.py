@@ -23,7 +23,7 @@ name = "Color String Plug-in"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
 autoactivate = True
 deactivateable = True
-version = "2.0.0"
+version = "2.0.1"
 className = "ColorStringPlugin"
 packageName = "ColorString"
 shortDescription = "Insert color as string"
@@ -157,6 +157,7 @@ class ColorStringPlugin(QObject):
             act = menu.addMenu(self.__menu)
             self.__menu.setEnabled(True)
             self.__editors[editor].append(act)
+            editor.showMenu.connect(self.__editorShowMenu)
     
     def __editorClosed(self, editor):
         """
@@ -170,6 +171,25 @@ class ColorStringPlugin(QObject):
                 self.__menu.setEnabled(False)
         except KeyError:
             pass
+    
+    def __editorShowMenu(self, menuName, menu, editor):
+        """
+        Private slot called, when the the editor context menu or a submenu is
+        about to be shown.
+        
+        @param menuName name of the menu to be shown (string)
+        @param menu reference to the menu (QMenu)
+        @param editor reference to the editor
+        """
+        if menuName == "Tools":
+            if self.__menu.menuAction() not in menu.actions():
+                # Re-add our menu
+                self.__editors[editor] = []
+                if not menu.isEmpty():
+                    act = menu.addSeparator()
+                    self.__editors[editor].append(act)
+                act = menu.addMenu(self.__menu)
+                self.__editors[editor].append(act)
     
     def __isHexString(self, text):
         """

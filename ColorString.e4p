@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric project file for project ColorString -->
-<!-- Copyright (C) 2014 Detlev Offenbach, detlev@die-offenbachs.de -->
+<!-- Copyright (C) 2015 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
   <Hash>bf7dfc760db7f57239ae96b215ea79bb0df717d5</Hash>
@@ -9,7 +9,7 @@
   <ProjectType>E6Plugin</ProjectType>
   <Description>Plug-in to select a color via a color selection dialog and insert it as a string at the current editor cursor position. Selected text is used to initialize the dialog and is replaced with the new color.
 </Description>
-  <Version>0.1</Version>
+  <Version>2.x</Version>
   <Author>Detlev Offenbach</Author>
   <Email>detlev@die-offenbachs.de</Email>
   <TranslationPattern>ColorString/i18n/colorstring_%language%.ts</TranslationPattern>
