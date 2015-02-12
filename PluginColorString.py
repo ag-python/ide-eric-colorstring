@@ -23,7 +23,7 @@ name = "Color String Plug-in"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
 autoactivate = True
 deactivateable = True
-version = "2.0.1"
+version = "2.1.0"
 className = "ColorStringPlugin"
 packageName = "ColorString"
 shortDescription = "Insert color as string"
@@ -124,9 +124,10 @@ class ColorStringPlugin(QObject):
         """
         Private method to initialize the menu.
         """
-        self.__menu = QMenu("Color String")
-        self.__menu.addAction("Hex Color", self.__selectHexColor)
-        self.__menu.addAction("Color Name", self.__selectColorName)
+        self.__menu = QMenu(self.tr("Color String"))
+        self.__menu.addAction(self.tr("Hex Color"), self.__selectHexColor)
+        self.__menu.addAction(self.tr("Color Name"), self.__selectColorName)
+        self.__menu.addAction(self.tr("RGBA Color"), self.__selectRgbaColor)
         self.__menu.setEnabled(False)
     
     def __populateMenu(self, name, menu):
@@ -308,3 +309,72 @@ class ColorStringPlugin(QObject):
                 editor.insert(colorStr)
                 editor.setCursorPosition(line, index + len(colorStr))
             editor.endUndoAction()
+    
+    def __selectRgbaColor(self):
+        """
+        Private slot implementing the RGBA color string selection.
+        """
+        editor = e5App().getObject("ViewManager").activeWindow()
+        if editor is None:
+            return
+        
+        if editor.hasSelectedText():
+            currColor = editor.selectedText()
+            valid, rgba = self.__isValidRgbaColor(currColor)
+            if not valid:
+                E5MessageBox.critical(
+                    self.__ui,
+                    self.tr("Color String"),
+                    self.tr(
+                        """<p>The selected string <b>{0}</b> is not a"""
+                        """ valid color string. Aborting!</p>""")
+                    .format(currColor))
+                return
+            initColor = QColor(*rgba)
+        else:
+            initColor = QColor()
+        
+        color = QColorDialog.getColor(
+            initColor, self.__ui, self.tr("Color String"),
+            QColorDialog.ShowAlphaChannel)
+        if color.isValid():
+            rgba = color.getRgb()
+            if rgba[-1] == 255:
+                colorStr = "{0}, {1}, {2}".format(*rgba[:-1])
+            else:
+                colorStr = "{0}, {1}, {2}, {3}".format(*rgba)
+            editor.beginUndoAction()
+            if editor.hasSelectedText():
+                editor.replaceSelectedText(colorStr)
+            else:
+                line, index = editor.getCursorPosition()
+                editor.insert(colorStr)
+                editor.setCursorPosition(line, index + len(colorStr))
+            editor.endUndoAction()
+    
+    def __isValidRgbaColor(self, color):
+        """
+        Private method to check for a valid RGBA color.
+        
+        @param name color string to check (string)
+        @return flag indicating a valid RGBA color (boolean) and a list with
+            the RGBA components of the color (three or four integers)
+        """
+        rgba = []
+        
+        parts = color.split(",")
+        if len(parts) not in [3, 4]:
+            return False, []
+        
+        for part in parts:
+            try:
+                c = int(part)
+            except ValueError:
+                return False, []
+            
+            if c < 0 or c > 255:
+                return False, []
+            
+            rgba.append(c)
+        
+        return True, rgba

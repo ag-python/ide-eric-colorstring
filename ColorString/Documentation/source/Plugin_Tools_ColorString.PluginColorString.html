@@ -78,6 +78,9 @@ QObject
 <td><a href="#ColorStringPlugin.__isValidColor">__isValidColor</a></td>
 <td>Private method to check for a valid color name.</td>
 </tr><tr>
+<td><a href="#ColorStringPlugin.__isValidRgbaColor">__isValidRgbaColor</a></td>
+<td>Private method to check for a valid RGBA color.</td>
+</tr><tr>
 <td><a href="#ColorStringPlugin.__loadTranslator">__loadTranslator</a></td>
 <td>Private method to load the translation file.</td>
 </tr><tr>
@@ -89,6 +92,9 @@ QObject
 </tr><tr>
 <td><a href="#ColorStringPlugin.__selectHexColor">__selectHexColor</a></td>
 <td>Private slot implementing the hex color string selection.</td>
+</tr><tr>
+<td><a href="#ColorStringPlugin.__selectRgbaColor">__selectRgbaColor</a></td>
+<td>Private slot implementing the RGBA color string selection.</td>
 </tr><tr>
 <td><a href="#ColorStringPlugin.activate">activate</a></td>
 <td>Public method to activate this plugin.</td>
@@ -183,6 +189,22 @@ color name to check (string)
 <dd>
 flag indicating a valid color name (boolean)
 </dd>
+</dl><a NAME="ColorStringPlugin.__isValidRgbaColor" ID="ColorStringPlugin.__isValidRgbaColor"></a>
+<h4>ColorStringPlugin.__isValidRgbaColor</h4>
+<b>__isValidRgbaColor</b>(<i>color</i>)
+<p>
+        Private method to check for a valid RGBA color.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+color string to check (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a valid RGBA color (boolean) and a list with
+            the RGBA components of the color (three or four integers)
+</dd>
 </dl><a NAME="ColorStringPlugin.__loadTranslator" ID="ColorStringPlugin.__loadTranslator"></a>
 <h4>ColorStringPlugin.__loadTranslator</h4>
 <b>__loadTranslator</b>(<i></i>)
@@ -211,6 +233,11 @@ reference to the menu to be populated (QMenu)
 <b>__selectHexColor</b>(<i></i>)
 <p>
         Private slot implementing the hex color string selection.
+</p><a NAME="ColorStringPlugin.__selectRgbaColor" ID="ColorStringPlugin.__selectRgbaColor"></a>
+<h4>ColorStringPlugin.__selectRgbaColor</h4>
+<b>__selectRgbaColor</b>(<i></i>)
+<p>
+        Private slot implementing the RGBA color string selection.
 </p><a NAME="ColorStringPlugin.activate" ID="ColorStringPlugin.activate"></a>
 <h4>ColorStringPlugin.activate</h4>
 <b>activate</b>(<i></i>)

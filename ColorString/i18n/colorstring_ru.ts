@@ -21,19 +21,34 @@
 <context>
     <name>ColorStringPlugin</name>
     <message>
-        <location filename="../../PluginColorString.py" line="269"/>
+        <location filename="../../PluginColorString.py" line="340"/>
         <source>Color String</source>
         <translation>Цвет</translation>
     </message>
     <message>
-        <location filename="../../PluginColorString.py" line="220"/>
+        <location filename="../../PluginColorString.py" line="328"/>
         <source>&lt;p&gt;The selected string &lt;b&gt;{0}&lt;/b&gt; is not a valid color string. Aborting!&lt;/p&gt;</source>
         <translation>&lt;p&gt;Выбранная строка &lt;b&gt;{0}&lt;/b&gt; не является правильной для определения цвета. Авост!&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../PluginColorString.py" line="269"/>
+        <location filename="../../PluginColorString.py" line="291"/>
         <source>&lt;p&gt;The selected string &lt;b&gt;{0}&lt;/b&gt; is not a valid color name. Aborting!&lt;/p&gt;</source>
         <translation>&lt;p&gt;Выбранная строка &lt;b&gt;{0}&lt;/b&gt; не является правильным разванием цвета. Авост!&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../PluginColorString.py" line="129"/>
+        <source>Hex Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../PluginColorString.py" line="130"/>
+        <source>Color Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../PluginColorString.py" line="131"/>
+        <source>RGBA Color</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
