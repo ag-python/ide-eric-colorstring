@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es_ES" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es_ES">
 <context>
     <name>ColorSelectionDialog</name>
     <message>
@@ -38,17 +39,17 @@
     <message>
         <location filename="../../PluginColorString.py" line="129"/>
         <source>Hex Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Color Hex</translation>
     </message>
     <message>
         <location filename="../../PluginColorString.py" line="130"/>
         <source>Color Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre de Color</translation>
     </message>
     <message>
         <location filename="../../PluginColorString.py" line="131"/>
         <source>RGBA Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Color RGBA</translation>
     </message>
 </context>
 </TS>
