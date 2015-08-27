@@ -23,7 +23,7 @@ name = "Color String Plug-in"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
 autoactivate = True
 deactivateable = True
-version = "2.1.1"
+version = "2.2.0"
 className = "ColorStringPlugin"
 packageName = "ColorString"
 shortDescription = "Insert color as string"
@@ -59,6 +59,7 @@ class ColorStringPlugin(QObject):
         self.__initMenu()
         
         self.__editors = {}
+        self.__mainActions = []
     
     def activate(self):
         """
@@ -70,6 +71,14 @@ class ColorStringPlugin(QObject):
         error = ""     # clear previous error
         
         self.__ui.showMenu.connect(self.__populateMenu)
+        
+        menu = self.__ui.getMenu("plugin_tools")
+        if menu is not None:
+            if not menu.isEmpty():
+                act = menu.addSeparator()
+                self.__mainActions.append(act)
+            act = menu.addMenu(self.__menu)
+            self.__mainActions.append(act)
         
         e5App().getObject("ViewManager").editorOpenedEd.connect(
             self.__editorOpened)
@@ -87,6 +96,12 @@ class ColorStringPlugin(QObject):
         """
         self.__ui.showMenu.disconnect(self.__populateMenu)
         
+        menu = self.__ui.getMenu("plugin_tools")
+        if menu is not None:
+            for act in self.__mainActions:
+                menu.removeAction(act)
+        self.__mainActions = []
+
         e5App().getObject("ViewManager").editorOpenedEd.disconnect(
             self.__editorOpened)
         e5App().getObject("ViewManager").editorClosedEd.disconnect(
@@ -137,12 +152,18 @@ class ColorStringPlugin(QObject):
         @param name name of the menu (string)
         @param menu reference to the menu to be populated (QMenu)
         """
-        if name != "Tools":
+        if name not in ["Tools", "PluginTools"]:
             return
         
-        if not menu.isEmpty():
-            menu.addSeparator()
-        menu.addMenu(self.__menu)
+        editor = e5App().getObject("ViewManager").activeWindow()
+        
+        if name == "Tools":
+            if not menu.isEmpty():
+                menu.addSeparator()
+            act = menu.addMenu(self.__menu)
+            act.setEnabled(editor is not None)
+        elif name == "PluginTools" and self.__mainActions:
+            self.__mainActions[-1].setEnabled(editor is not None)
     
     def __editorOpened(self, editor):
         """
