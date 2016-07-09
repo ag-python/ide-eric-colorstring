@@ -5,48 +5,48 @@
     <message>
         <location filename="../ColorSelectionDialog.ui" line="14"/>
         <source>Color String</source>
-        <translation>Цвет</translation>
+        <translation>Строка определения цвета</translation>
     </message>
     <message>
         <location filename="../ColorSelectionDialog.ui" line="23"/>
         <source>Select Color Name:</source>
-        <translation>Имя цвета:</translation>
+        <translation>Выберите имя цвета:</translation>
     </message>
     <message>
         <location filename="../ColorSelectionDialog.ui" line="30"/>
         <source>Select a color by name</source>
-        <translation>Выберите цвет по имени</translation>
+        <translation>Выберите цвет по его названию</translation>
     </message>
 </context>
 <context>
     <name>ColorStringPlugin</name>
     <message>
-        <location filename="../../PluginColorString.py" line="340"/>
+        <location filename="../../PluginColorString.py" line="361"/>
         <source>Color String</source>
-        <translation>Цвет</translation>
+        <translation>Строка определения цвета</translation>
     </message>
     <message>
-        <location filename="../../PluginColorString.py" line="328"/>
+        <location filename="../../PluginColorString.py" line="349"/>
         <source>&lt;p&gt;The selected string &lt;b&gt;{0}&lt;/b&gt; is not a valid color string. Aborting!&lt;/p&gt;</source>
         <translation>&lt;p&gt;Выбранная строка &lt;b&gt;{0}&lt;/b&gt; неприменима для определения цвета. Отмена!&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../PluginColorString.py" line="291"/>
+        <location filename="../../PluginColorString.py" line="312"/>
         <source>&lt;p&gt;The selected string &lt;b&gt;{0}&lt;/b&gt; is not a valid color name. Aborting!&lt;/p&gt;</source>
         <translation>&lt;p&gt;Выбранная строка &lt;b&gt;{0}&lt;/b&gt; не действительна для названия цвета. Отмена!&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../PluginColorString.py" line="129"/>
+        <location filename="../../PluginColorString.py" line="144"/>
         <source>Hex Color</source>
         <translation>Hex Color</translation>
     </message>
     <message>
-        <location filename="../../PluginColorString.py" line="130"/>
+        <location filename="../../PluginColorString.py" line="145"/>
         <source>Color Name</source>
         <translation>Color Name</translation>
     </message>
     <message>
-        <location filename="../../PluginColorString.py" line="131"/>
+        <location filename="../../PluginColorString.py" line="146"/>
         <source>RGBA Color</source>
         <translation>RGBA Color</translation>
     </message>
