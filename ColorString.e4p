@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric project file for project ColorString -->
-<!-- Copyright (C) 2015 Detlev Offenbach, detlev@die-offenbachs.de -->
+<!-- Copyright (C) 2017 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
   <Hash>bf7dfc760db7f57239ae96b215ea79bb0df717d5</Hash>
@@ -15,34 +15,34 @@
   <TranslationPattern>ColorString/i18n/colorstring_%language%.ts</TranslationPattern>
   <Eol index="1"/>
   <Sources>
-    <Source>__init__.py</Source>
-    <Source>PluginColorString.py</Source>
-    <Source>ColorString/__init__.py</Source>
     <Source>ColorString/ColorSelectionDialog.py</Source>
+    <Source>ColorString/__init__.py</Source>
+    <Source>PluginColorString.py</Source>
+    <Source>__init__.py</Source>
   </Sources>
   <Forms>
     <Form>ColorString/ColorSelectionDialog.ui</Form>
   </Forms>
   <Translations>
-    <Translation>ColorString/i18n/colorstring_de.ts</Translation>
-    <Translation>ColorString/i18n/colorstring_en.ts</Translation>
-    <Translation>ColorString/i18n/colorstring_es.ts</Translation>
     <Translation>ColorString/i18n/colorstring_de.qm</Translation>
+    <Translation>ColorString/i18n/colorstring_de.ts</Translation>
     <Translation>ColorString/i18n/colorstring_en.qm</Translation>
+    <Translation>ColorString/i18n/colorstring_en.ts</Translation>
     <Translation>ColorString/i18n/colorstring_es.qm</Translation>
-    <Translation>ColorString/i18n/colorstring_ru.ts</Translation>
+    <Translation>ColorString/i18n/colorstring_es.ts</Translation>
     <Translation>ColorString/i18n/colorstring_ru.qm</Translation>
+    <Translation>ColorString/i18n/colorstring_ru.ts</Translation>
   </Translations>
   <Resources/>
   <Interfaces/>
   <Others>
     <Other>.hgignore</Other>
     <Other>ChangeLog</Other>
+    <Other>ColorString.e4p</Other>
     <Other>ColorString/Documentation/LICENSE.GPL3</Other>
     <Other>ColorString/Documentation/source</Other>
     <Other>PKGLIST</Other>
     <Other>PluginColorString.zip</Other>
-    <Other>ColorString.e4p</Other>
   </Others>
   <MainScript>PluginColorString.py</MainScript>
   <Vcs>
@@ -147,9 +147,6 @@
         </value>
       </dict>
     </VcsOptions>
-    <VcsOtherData>
-      <dict/>
-    </VcsOtherData>
   </Vcs>
   <FiletypeAssociations>
     <FiletypeAssociation pattern="*.idl" type="INTERFACES"/>
@@ -219,14 +216,6 @@
               <bool>False</bool>
             </value>
             <key>
-              <string>sourceExtensions</string>
-            </key>
-            <value>
-              <list>
-                <string></string>
-              </list>
-            </value>
-            <key>
               <string>useRecursion</string>
             </key>
             <value>
@@ -246,6 +235,49 @@
         <value>
           <dict>
             <key>
+              <string>BuiltinsChecker</string>
+            </key>
+            <value>
+              <dict>
+                <key>
+                  <string>bytes</string>
+                </key>
+                <value>
+                  <list>
+                    <string>unicode</string>
+                  </list>
+                </value>
+                <key>
+                  <string>chr</string>
+                </key>
+                <value>
+                  <list>
+                    <string>unichr</string>
+                  </list>
+                </value>
+                <key>
+                  <string>str</string>
+                </key>
+                <value>
+                  <list>
+                    <string>unicode</string>
+                  </list>
+                </value>
+              </dict>
+            </value>
+            <key>
+              <string>CopyrightAuthor</string>
+            </key>
+            <value>
+              <string></string>
+            </value>
+            <key>
+              <string>CopyrightMinFileSize</string>
+            </key>
+            <value>
+              <int>0</int>
+            </value>
+            <key>
               <string>DocstringType</string>
             </key>
             <value>
@@ -255,13 +287,13 @@
               <string>ExcludeFiles</string>
             </key>
             <value>
-              <string>*/Ui_*.py</string>
+              <string>*/Ui_*.py, */*_rc.py</string>
             </value>
             <key>
               <string>ExcludeMessages</string>
             </key>
             <value>
-              <string>W293, N802, N803, N807, N808, N821,E265</string>
+              <string>C101, E265, E266, E305, E402, M811, N802, N803, N807, N808, N821, W293</string>
             </value>
             <key>
               <string>FixCodes</string>
@@ -276,6 +308,12 @@
               <bool>False</bool>
             </value>
             <key>
+              <string>FutureChecker</string>
+            </key>
+            <value>
+              <string>unicode_literals</string>
+            </value>
+            <key>
               <string>HangClosing</string>
             </key>
             <value>
@@ -286,6 +324,24 @@
             </key>
             <value>
               <string></string>
+            </value>
+            <key>
+              <string>LineComplexity</string>
+            </key>
+            <value>
+              <int>20</int>
+            </value>
+            <key>
+              <string>LineComplexityScore</string>
+            </key>
+            <value>
+              <int>10</int>
+            </value>
+            <key>
+              <string>MaxCodeComplexity</string>
+            </key>
+            <value>
+              <int>10</int>
             </value>
             <key>
               <string>MaxLineLength</string>
@@ -310,6 +366,12 @@
             </key>
             <value>
               <bool>False</bool>
+            </value>
+            <key>
+              <string>ValidEncodings</string>
+            </key>
+            <value>
+              <string>latin-1, utf-8</string>
             </value>
           </dict>
         </value>

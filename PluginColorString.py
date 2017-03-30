@@ -23,7 +23,7 @@ name = "Color String Plug-in"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
 autoactivate = True
 deactivateable = True
-version = "2.2.2"
+version = "2.2.3"
 className = "ColorStringPlugin"
 packageName = "ColorString"
 shortDescription = "Insert color as string"
@@ -377,7 +377,7 @@ class ColorStringPlugin(QObject):
         """
         Private method to check for a valid RGBA color.
         
-        @param name color string to check (string)
+        @param color color string to check (string)
         @return flag indicating a valid RGBA color (boolean) and a list with
             the RGBA components of the color (three or four integers)
         """
@@ -399,3 +399,6 @@ class ColorStringPlugin(QObject):
             rgba.append(c)
         
         return True, rgba
+
+#
+# eflag: noqa = M801
