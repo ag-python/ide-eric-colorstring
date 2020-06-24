@@ -7,8 +7,6 @@
 Module implementing a dialog to select a color by name.
 """
 
-from __future__ import unicode_literals
-
 from PyQt5.QtGui import QColor, QPixmap, QIcon
 from PyQt5.QtWidgets import QDialog
 

@@ -3,17 +3,17 @@
 <context>
     <name>ColorSelectionDialog</name>
     <message>
-        <location filename="../../ColorString/ColorSelectionDialog.ui" line="14"/>
+        <location filename="../ColorSelectionDialog.ui" line="14"/>
         <source>Color String</source>
         <translation>Cadena de Color</translation>
     </message>
     <message>
-        <location filename="../../ColorString/ColorSelectionDialog.ui" line="23"/>
+        <location filename="../ColorSelectionDialog.ui" line="23"/>
         <source>Select Color Name:</source>
         <translation>Seleccionar Nombre de Color:</translation>
     </message>
     <message>
-        <location filename="../../ColorString/ColorSelectionDialog.ui" line="30"/>
+        <location filename="../ColorSelectionDialog.ui" line="30"/>
         <source>Select a color by name</source>
         <translation>Seleccionar un color por nombre</translation>
     </message>
@@ -21,32 +21,32 @@
 <context>
     <name>ColorStringPlugin</name>
     <message>
-        <location filename="../../PluginColorString.py" line="340"/>
+        <location filename="../../PluginColorString.py" line="353"/>
         <source>Color String</source>
         <translation>Cadena de Color</translation>
     </message>
     <message>
-        <location filename="../../PluginColorString.py" line="328"/>
+        <location filename="../../PluginColorString.py" line="341"/>
         <source>&lt;p&gt;The selected string &lt;b&gt;{0}&lt;/b&gt; is not a valid color string. Aborting!&lt;/p&gt;</source>
         <translation>&lt;p&gt;La cadena seleccionada&lt;b&gt;{0}&lt;/b&gt; no es una cadena de color válida. ¡Abortando!&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../PluginColorString.py" line="291"/>
+        <location filename="../../PluginColorString.py" line="305"/>
         <source>&lt;p&gt;The selected string &lt;b&gt;{0}&lt;/b&gt; is not a valid color name. Aborting!&lt;/p&gt;</source>
         <translation>&lt;p&gt;La cadena seleccionada&lt;b&gt;{0}&lt;/b&gt; no es un nombre de color válido. ¡Abortando!&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../PluginColorString.py" line="129"/>
+        <location filename="../../PluginColorString.py" line="141"/>
         <source>Hex Color</source>
         <translation>Color Hex</translation>
     </message>
     <message>
-        <location filename="../../PluginColorString.py" line="130"/>
+        <location filename="../../PluginColorString.py" line="142"/>
         <source>Color Name</source>
         <translation>Nombre de Color</translation>
     </message>
     <message>
-        <location filename="../../PluginColorString.py" line="131"/>
+        <location filename="../../PluginColorString.py" line="143"/>
         <source>RGBA Color</source>
         <translation>Color RGBA</translation>
     </message>

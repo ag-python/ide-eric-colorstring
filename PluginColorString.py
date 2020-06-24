@@ -7,8 +7,6 @@
 Module implementing the 'Color String' tool plug-in.
 """
 
-from __future__ import unicode_literals
-
 import os
 
 from PyQt5.QtCore import QObject, QTranslator
@@ -23,18 +21,18 @@ name = "Color String Plug-in"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
 autoactivate = True
 deactivateable = True
-version = "2.2.3"
+version = "3.0.0"
 className = "ColorStringPlugin"
 packageName = "ColorString"
 shortDescription = "Insert color as string"
-longDescription = \
-    """This plug-in implements a tool to select a color via a""" \
-    """ color selection dialog and insert it as a hex string at the""" \
-    """ current cursor position. Selected text is used to initialize""" \
+longDescription = (
+    """This plug-in implements a tool to select a color via a"""
+    """ color selection dialog and insert it as a hex string at the"""
+    """ current cursor position. Selected text is used to initialize"""
     """ the dialog and is replaced with the new color."""
+)
 needsRestart = False
 pyqtApi = 2
-python2Compatible = True
 # End-Of-Header
 
 error = ""
@@ -221,10 +219,7 @@ class ColorStringPlugin(QObject):
         @param text text to check (string)
         @return flag indicating a hex string (boolean)
         """
-        isHex = True
-        for c in text:
-            isHex = isHex and c in "0123456789abcdefABCDEF"
-        return isHex
+        return all(map(lambda c: c in "0123456789abcdefABCDEF", text))
     
     def __isValidColor(self, name):
         """

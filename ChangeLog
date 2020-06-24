@@ -1,5 +1,8 @@
 ChangeLog
 ---------
+Version 3.0.0:
+- removed support for Python2
+
 Version 2.2.3:
 - bug fixes
 

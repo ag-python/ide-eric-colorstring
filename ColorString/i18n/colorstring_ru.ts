@@ -21,32 +21,32 @@
 <context>
     <name>ColorStringPlugin</name>
     <message>
-        <location filename="../../PluginColorString.py" line="361"/>
+        <location filename="../../PluginColorString.py" line="353"/>
         <source>Color String</source>
         <translation>Строка определения цвета</translation>
     </message>
     <message>
-        <location filename="../../PluginColorString.py" line="349"/>
+        <location filename="../../PluginColorString.py" line="341"/>
         <source>&lt;p&gt;The selected string &lt;b&gt;{0}&lt;/b&gt; is not a valid color string. Aborting!&lt;/p&gt;</source>
         <translation>&lt;p&gt;Выбранная строка &lt;b&gt;{0}&lt;/b&gt; неприменима для определения цвета. Отмена!&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../PluginColorString.py" line="312"/>
+        <location filename="../../PluginColorString.py" line="305"/>
         <source>&lt;p&gt;The selected string &lt;b&gt;{0}&lt;/b&gt; is not a valid color name. Aborting!&lt;/p&gt;</source>
         <translation>&lt;p&gt;Выбранная строка &lt;b&gt;{0}&lt;/b&gt; не действительна для названия цвета. Отмена!&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../PluginColorString.py" line="144"/>
+        <location filename="../../PluginColorString.py" line="141"/>
         <source>Hex Color</source>
         <translation>Hex Color</translation>
     </message>
     <message>
-        <location filename="../../PluginColorString.py" line="145"/>
+        <location filename="../../PluginColorString.py" line="142"/>
         <source>Color Name</source>
         <translation>Color Name</translation>
     </message>
     <message>
-        <location filename="../../PluginColorString.py" line="146"/>
+        <location filename="../../PluginColorString.py" line="143"/>
         <source>RGBA Color</source>
         <translation>RGBA Color</translation>
     </message>

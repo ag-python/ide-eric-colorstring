@@ -18,239 +18,319 @@ a { color: #BA6D36; }
 
 </style>
 </head>
-<body><a NAME="top" ID="top"></a>
+<body>
+<a NAME="top" ID="top"></a>
 <h1>Plugin_Tools_ColorString.PluginColorString</h1>
+
 <p>
 Module implementing the 'Color String' tool plug-in.
 </p>
 <h3>Global Attributes</h3>
+
 <table>
-<tr><td>author</td></tr><tr><td>autoactivate</td></tr><tr><td>className</td></tr><tr><td>deactivateable</td></tr><tr><td>error</td></tr><tr><td>longDescription</td></tr><tr><td>name</td></tr><tr><td>needsRestart</td></tr><tr><td>packageName</td></tr><tr><td>pyqtApi</td></tr><tr><td>python2Compatible</td></tr><tr><td>shortDescription</td></tr><tr><td>version</td></tr>
+<tr><td>author</td></tr><tr><td>autoactivate</td></tr><tr><td>className</td></tr><tr><td>deactivateable</td></tr><tr><td>error</td></tr><tr><td>longDescription</td></tr><tr><td>name</td></tr><tr><td>needsRestart</td></tr><tr><td>packageName</td></tr><tr><td>pyqtApi</td></tr><tr><td>shortDescription</td></tr><tr><td>version</td></tr>
 </table>
 <h3>Classes</h3>
+
 <table>
+
 <tr>
 <td><a href="#ColorStringPlugin">ColorStringPlugin</a></td>
 <td>Class implementing the 'Color String' tool plug-in.</td>
 </tr>
 </table>
 <h3>Functions</h3>
+
 <table>
 <tr><td>None</td></tr>
 </table>
-<hr /><hr />
+<hr />
+<hr />
 <a NAME="ColorStringPlugin" ID="ColorStringPlugin"></a>
 <h2>ColorStringPlugin</h2>
+
 <p>
     Class implementing the 'Color String' tool plug-in.
 </p>
 <h3>Derived from</h3>
 QObject
 <h3>Class Attributes</h3>
+
 <table>
 <tr><td>None</td></tr>
 </table>
 <h3>Class Methods</h3>
+
 <table>
 <tr><td>None</td></tr>
 </table>
 <h3>Methods</h3>
+
 <table>
+
 <tr>
 <td><a href="#ColorStringPlugin.__init__">ColorStringPlugin</a></td>
 <td>Constructor</td>
-</tr><tr>
+</tr>
+<tr>
 <td><a href="#ColorStringPlugin.__editorClosed">__editorClosed</a></td>
 <td>Private slot called, when an editor was closed.</td>
-</tr><tr>
+</tr>
+<tr>
 <td><a href="#ColorStringPlugin.__editorOpened">__editorOpened</a></td>
 <td>Private slot called, when a new editor was opened.</td>
-</tr><tr>
+</tr>
+<tr>
 <td><a href="#ColorStringPlugin.__editorShowMenu">__editorShowMenu</a></td>
 <td>Private slot called, when the the editor context menu or a submenu is about to be shown.</td>
-</tr><tr>
+</tr>
+<tr>
 <td><a href="#ColorStringPlugin.__initMenu">__initMenu</a></td>
 <td>Private method to initialize the menu.</td>
-</tr><tr>
+</tr>
+<tr>
 <td><a href="#ColorStringPlugin.__isHexString">__isHexString</a></td>
 <td>Private method to check, if a given text is a hex string.</td>
-</tr><tr>
+</tr>
+<tr>
 <td><a href="#ColorStringPlugin.__isValidColor">__isValidColor</a></td>
 <td>Private method to check for a valid color name.</td>
-</tr><tr>
+</tr>
+<tr>
 <td><a href="#ColorStringPlugin.__isValidRgbaColor">__isValidRgbaColor</a></td>
 <td>Private method to check for a valid RGBA color.</td>
-</tr><tr>
+</tr>
+<tr>
 <td><a href="#ColorStringPlugin.__loadTranslator">__loadTranslator</a></td>
 <td>Private method to load the translation file.</td>
-</tr><tr>
+</tr>
+<tr>
 <td><a href="#ColorStringPlugin.__populateMenu">__populateMenu</a></td>
 <td>Private slot to populate the tools menu with our entry.</td>
-</tr><tr>
+</tr>
+<tr>
 <td><a href="#ColorStringPlugin.__selectColorName">__selectColorName</a></td>
 <td>Private slot implementing the named color string selection.</td>
-</tr><tr>
+</tr>
+<tr>
 <td><a href="#ColorStringPlugin.__selectHexColor">__selectHexColor</a></td>
 <td>Private slot implementing the hex color string selection.</td>
-</tr><tr>
+</tr>
+<tr>
 <td><a href="#ColorStringPlugin.__selectRgbaColor">__selectRgbaColor</a></td>
 <td>Private slot implementing the RGBA color string selection.</td>
-</tr><tr>
+</tr>
+<tr>
 <td><a href="#ColorStringPlugin.activate">activate</a></td>
 <td>Public method to activate this plugin.</td>
-</tr><tr>
+</tr>
+<tr>
 <td><a href="#ColorStringPlugin.deactivate">deactivate</a></td>
 <td>Public method to deactivate this plugin.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
+
 <table>
 <tr><td>None</td></tr>
 </table>
+
 <a NAME="ColorStringPlugin.__init__" ID="ColorStringPlugin.__init__"></a>
 <h4>ColorStringPlugin (Constructor)</h4>
 <b>ColorStringPlugin</b>(<i>ui</i>)
+
 <p>
         Constructor
-</p><dl>
+</p>
+<dl>
+
 <dt><i>ui</i></dt>
 <dd>
 reference to the user interface object (UI.UserInterface)
 </dd>
-</dl><a NAME="ColorStringPlugin.__editorClosed" ID="ColorStringPlugin.__editorClosed"></a>
+</dl>
+<a NAME="ColorStringPlugin.__editorClosed" ID="ColorStringPlugin.__editorClosed"></a>
 <h4>ColorStringPlugin.__editorClosed</h4>
 <b>__editorClosed</b>(<i>editor</i>)
+
 <p>
         Private slot called, when an editor was closed.
-</p><dl>
+</p>
+<dl>
+
 <dt><i>editor</i></dt>
 <dd>
 reference to the editor (QScintilla.Editor)
 </dd>
-</dl><a NAME="ColorStringPlugin.__editorOpened" ID="ColorStringPlugin.__editorOpened"></a>
+</dl>
+<a NAME="ColorStringPlugin.__editorOpened" ID="ColorStringPlugin.__editorOpened"></a>
 <h4>ColorStringPlugin.__editorOpened</h4>
 <b>__editorOpened</b>(<i>editor</i>)
+
 <p>
         Private slot called, when a new editor was opened.
-</p><dl>
+</p>
+<dl>
+
 <dt><i>editor</i></dt>
 <dd>
 reference to the new editor (QScintilla.Editor)
 </dd>
-</dl><a NAME="ColorStringPlugin.__editorShowMenu" ID="ColorStringPlugin.__editorShowMenu"></a>
+</dl>
+<a NAME="ColorStringPlugin.__editorShowMenu" ID="ColorStringPlugin.__editorShowMenu"></a>
 <h4>ColorStringPlugin.__editorShowMenu</h4>
 <b>__editorShowMenu</b>(<i>menuName, menu, editor</i>)
+
 <p>
         Private slot called, when the the editor context menu or a submenu is
         about to be shown.
-</p><dl>
+</p>
+<dl>
+
 <dt><i>menuName</i></dt>
 <dd>
 name of the menu to be shown (string)
-</dd><dt><i>menu</i></dt>
+</dd>
+<dt><i>menu</i></dt>
 <dd>
 reference to the menu (QMenu)
-</dd><dt><i>editor</i></dt>
+</dd>
+<dt><i>editor</i></dt>
 <dd>
 reference to the editor
 </dd>
-</dl><a NAME="ColorStringPlugin.__initMenu" ID="ColorStringPlugin.__initMenu"></a>
+</dl>
+<a NAME="ColorStringPlugin.__initMenu" ID="ColorStringPlugin.__initMenu"></a>
 <h4>ColorStringPlugin.__initMenu</h4>
 <b>__initMenu</b>(<i></i>)
+
 <p>
         Private method to initialize the menu.
-</p><a NAME="ColorStringPlugin.__isHexString" ID="ColorStringPlugin.__isHexString"></a>
+</p>
+<a NAME="ColorStringPlugin.__isHexString" ID="ColorStringPlugin.__isHexString"></a>
 <h4>ColorStringPlugin.__isHexString</h4>
 <b>__isHexString</b>(<i>text</i>)
+
 <p>
         Private method to check, if a given text is a hex string.
-</p><dl>
+</p>
+<dl>
+
 <dt><i>text</i></dt>
 <dd>
 text to check (string)
 </dd>
-</dl><dl>
+</dl>
+<dl>
 <dt>Returns:</dt>
 <dd>
 flag indicating a hex string (boolean)
 </dd>
-</dl><a NAME="ColorStringPlugin.__isValidColor" ID="ColorStringPlugin.__isValidColor"></a>
+</dl>
+<a NAME="ColorStringPlugin.__isValidColor" ID="ColorStringPlugin.__isValidColor"></a>
 <h4>ColorStringPlugin.__isValidColor</h4>
 <b>__isValidColor</b>(<i>name</i>)
+
 <p>
         Private method to check for a valid color name.
-</p><dl>
+</p>
+<dl>
+
 <dt><i>name</i></dt>
 <dd>
 color name to check (string)
 </dd>
-</dl><dl>
+</dl>
+<dl>
 <dt>Returns:</dt>
 <dd>
 flag indicating a valid color name (boolean)
 </dd>
-</dl><a NAME="ColorStringPlugin.__isValidRgbaColor" ID="ColorStringPlugin.__isValidRgbaColor"></a>
+</dl>
+<a NAME="ColorStringPlugin.__isValidRgbaColor" ID="ColorStringPlugin.__isValidRgbaColor"></a>
 <h4>ColorStringPlugin.__isValidRgbaColor</h4>
 <b>__isValidRgbaColor</b>(<i>color</i>)
+
 <p>
         Private method to check for a valid RGBA color.
-</p><dl>
+</p>
+<dl>
+
 <dt><i>color</i></dt>
 <dd>
 color string to check (string)
 </dd>
-</dl><dl>
+</dl>
+<dl>
 <dt>Returns:</dt>
 <dd>
 flag indicating a valid RGBA color (boolean) and a list with
             the RGBA components of the color (three or four integers)
 </dd>
-</dl><a NAME="ColorStringPlugin.__loadTranslator" ID="ColorStringPlugin.__loadTranslator"></a>
+</dl>
+<a NAME="ColorStringPlugin.__loadTranslator" ID="ColorStringPlugin.__loadTranslator"></a>
 <h4>ColorStringPlugin.__loadTranslator</h4>
 <b>__loadTranslator</b>(<i></i>)
+
 <p>
         Private method to load the translation file.
-</p><a NAME="ColorStringPlugin.__populateMenu" ID="ColorStringPlugin.__populateMenu"></a>
+</p>
+<a NAME="ColorStringPlugin.__populateMenu" ID="ColorStringPlugin.__populateMenu"></a>
 <h4>ColorStringPlugin.__populateMenu</h4>
 <b>__populateMenu</b>(<i>name, menu</i>)
+
 <p>
         Private slot to populate the tools menu with our entry.
-</p><dl>
+</p>
+<dl>
+
 <dt><i>name</i></dt>
 <dd>
 name of the menu (string)
-</dd><dt><i>menu</i></dt>
+</dd>
+<dt><i>menu</i></dt>
 <dd>
 reference to the menu to be populated (QMenu)
 </dd>
-</dl><a NAME="ColorStringPlugin.__selectColorName" ID="ColorStringPlugin.__selectColorName"></a>
+</dl>
+<a NAME="ColorStringPlugin.__selectColorName" ID="ColorStringPlugin.__selectColorName"></a>
 <h4>ColorStringPlugin.__selectColorName</h4>
 <b>__selectColorName</b>(<i></i>)
+
 <p>
         Private slot implementing the named color string selection.
-</p><a NAME="ColorStringPlugin.__selectHexColor" ID="ColorStringPlugin.__selectHexColor"></a>
+</p>
+<a NAME="ColorStringPlugin.__selectHexColor" ID="ColorStringPlugin.__selectHexColor"></a>
 <h4>ColorStringPlugin.__selectHexColor</h4>
 <b>__selectHexColor</b>(<i></i>)
+
 <p>
         Private slot implementing the hex color string selection.
-</p><a NAME="ColorStringPlugin.__selectRgbaColor" ID="ColorStringPlugin.__selectRgbaColor"></a>
+</p>
+<a NAME="ColorStringPlugin.__selectRgbaColor" ID="ColorStringPlugin.__selectRgbaColor"></a>
 <h4>ColorStringPlugin.__selectRgbaColor</h4>
 <b>__selectRgbaColor</b>(<i></i>)
+
 <p>
         Private slot implementing the RGBA color string selection.
-</p><a NAME="ColorStringPlugin.activate" ID="ColorStringPlugin.activate"></a>
+</p>
+<a NAME="ColorStringPlugin.activate" ID="ColorStringPlugin.activate"></a>
 <h4>ColorStringPlugin.activate</h4>
 <b>activate</b>(<i></i>)
+
 <p>
         Public method to activate this plugin.
-</p><dl>
+</p>
+<dl>
 <dt>Returns:</dt>
 <dd>
 tuple of None and activation status (boolean)
 </dd>
-</dl><a NAME="ColorStringPlugin.deactivate" ID="ColorStringPlugin.deactivate"></a>
+</dl>
+<a NAME="ColorStringPlugin.deactivate" ID="ColorStringPlugin.deactivate"></a>
 <h4>ColorStringPlugin.deactivate</h4>
 <b>deactivate</b>(<i></i>)
+
 <p>
         Public method to deactivate this plugin.
 </p>
